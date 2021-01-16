@@ -51,7 +51,7 @@
         <center>
         <div style="margin-left:10%;padding:1px 16px;height:1000px;">
             <h2>Greatest Common Divisor Calculator</h2>
-            <p>ex) 2, 4</p>
+            <p>ex) 2, 4, 6</p>
             <form id="form">
                 <input type="type" id="idname" value="">
             </form>
@@ -74,7 +74,7 @@
                         y = x % y;
                         x = t;
                     }
-                    document.getElementById("demo").innerHTML = x;
+                    return x;
                 }
 
                 var number = "";
@@ -113,8 +113,31 @@
                         document.getElementById("demo").innerHTML = "Value shouldn't be zero.";
                     }
                     else {
-                        gcd_two_numbers(numbers[0], numbers[1]);
+                        var a = gcd_two_numbers(numbers[0], numbers[1]);
+                        document.getElementById("demo").innerHTML = a; 
                     }
+                }
+
+                else if (numbers.length > 2) {
+                    if (numbers[0] == 0 || numbers[1] == 0) {
+                        document.getElementById("demo").innerHTML = "Value shouldn't be zero.";
+                    }
+                    else {
+                        var a = gcd_two_numbers(numbers[0], numbers[1]);
+                    }
+
+                    for (var index_of_numbers=2; index_of_numbers<numbers.length; index_of_numbers++) {
+                        if (numbers[index_of_numbers] == 0) {
+                            document.getElementById("demo").innerHTML = "Value shouldn't be zero.";
+                            break
+                        }
+                        else {
+                            var cd = gcd_two_numbers(a, numbers[index_of_numbers]);
+                            a = cd;
+                        }
+                    }
+
+                    document.getElementById("demo").innerHTML = cd;                    
                 }
             }
         </script>
