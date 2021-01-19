@@ -4,42 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <style>
-            body {
-            margin: 0;
-            }
-
-            ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            width: 10%;
-            background-color: #98b4ad;
-            position: fixed;
-            height: 100%;
-            overflow: auto;
-            }
-
-            li a {
-            display: block;
-            color: #000;
-            padding: 8px 16px;
-            text-decoration: none;
-            }
-
-            li a.active {
-            background-color: #4CAF50;
-            color: white;
-            }
-
-            li a:hover:not(.active) {
-            background-color: rgb(212, 100, 8);
-            color: white;
-            }
-            input {
-            width: 100%;
-            }
-        </style>
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
 
@@ -74,22 +39,21 @@
                <td><input style="height:200px;width:200px" type="button" class="operator" name="minus" value="-" onclick="calculator.display.value += '-'"></td>
             </tr>
             <tr>
-               <td><input style="height:200px;width:200px" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
-               <td><input style="height:200px;width:200px" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
-               <td><input style="height:200px;width:200px" type="button" name="nine" value="9" onclick="calculator.display.value += '9'"></td>
-               <td><input style="height:200px;width:200px" type="button" class="operator" name="times" value="x" onclick="calculator.display.value += '*'"></td>
-            </tr>
-            <tr>
-               <td><input style="height:200px;width:200px" type="button" id="clear" name="clear" value="AC" onclick="calculator.display.value = ''"></td>
-               <td><input style="height:200px;width:200px" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
-               <td><input style="height:200px;width:200px" type="button" name="doit" value="=" onclick="calculator.display.value = eval(calculator.display.value)"></td>
-               <td><input style="height:200px;width:200px" type="button" class="operator" name="div" value="/" onclick="calculator.display.value += '/'"></td>
-            </tr>
-         </table>
-      </form>
-        </div>
-        </center>
-
-    </body>
-</html>
-
+                <td><input style="height:200px;width:200px" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                <td><input style="height:200px;width:200px" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                <td><input style="height:200px;width:200px" type="button" name="nine" value="9" onclick="calculator.display.value += '9'"></td>
+                <td><input style="height:200px;width:200px" type="button" class="operator" name="times" value="x" onclick="calculator.display.value += '*'"></td>
+             </tr>
+             <tr>
+                <td><input style="height:200px;width:200px" type="button" id="clear" name="clear" value="AC" onclick="calculator.display.value = ''"></td>
+                <td><input style="height:200px;width:200px" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                <td><input style="height:200px;width:200px" type="button" name="doit" value="=" onclick="calculator.display.value = eval(calculator.display.value)"></td>
+                <td><input style="height:200px;width:200px" type="button" class="operator" name="div" value="/" onclick="calculator.display.value += '/'"></td>
+             </tr>
+          </table>
+       </form>
+         </div>
+         </center>
+ 
+     </body>
+ </html>
