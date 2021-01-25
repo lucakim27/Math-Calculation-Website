@@ -7,7 +7,7 @@ ul {
   margin: 0;
   padding: 0;
   width: 10%;
-  background-color: #98b4ad;
+  background-color: #313131;
   position: fixed;
   height: 100%;
   overflow: auto;
@@ -15,17 +15,17 @@ ul {
 
 li a {
   display: block;
-  color: #000;
+  color: rgb(160, 160, 160);
   padding: 8px 16px;
   text-decoration: none;
 }
 
 li a.active {
-  background-color: #4CAF50;
-  color: white;
+  background-color: rgb(41, 41, 41);
+  color: rgb(190, 190, 190);
 }
 
 li a:hover:not(.active) {
-  background-color: rgb(212, 100, 8);
+  background-color: rgb(41, 41, 41);
   color: white;
 }
