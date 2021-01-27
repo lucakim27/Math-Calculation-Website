@@ -2,13 +2,6 @@ body {
     margin: 0;
 }
 
-#background {
-    height: 100%;
-    background-image: url('background.png');
-    background-repeat: repeat-x;
-    background-size: 130% auto;
-}
-
 ul {
   list-style-type: none;
   margin: 0;
