@@ -1,3 +1,3 @@
 # lucakim27.github.io
 
-https://lucakim27.github.io/index
+https://lucakim27.github.io
