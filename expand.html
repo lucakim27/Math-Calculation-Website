@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=1024">
+        <link rel="stylesheet" href="static/css/style.css">
+    </head>
+    <body>
+
+        <ul>
+            <li><a href="/index">Home</a></li>
+            <li><a href="/basic_calculator">Basic Calculator</a></li>
+            <li><a href="/gcd&lcm_calculator">GCD & LCM Calculator</a></li>
+            <li><a href="/graph_calculator">Graph Calculator</a></li>
+            <li><a href="/ordering_calculator">Ordering Calculator</a></li>
+            <li><a class="active" href="/expand_calculator">Expand Calculator</a></li>
+            <li><a href="/enquiry">Enquiry</a></li>
+        </ul>
+        
+        <center>
+        <div style="margin-left:10%;padding:1px 16px;height:1000px;">
+            <h1>Expand Calculator</h1>
+            <p>Please use the unknown value as 'x'</p>
+            <input id="input" type="text" value="(x+3)(x-3) + (x-4)^2" style="height:50px;width:500px">
+            <br>
+            <button onclick="caller()">Expand</button>
+            <br>
+            <br>
+            <div id="result"></div>
+            <div id="errors"></div>
+        </div>
+        </center>
+
+        <script type="text/javascript" src="static/js/expand.js"></script>
+
+    </body>
+</html>
