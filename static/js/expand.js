@@ -18,9 +18,11 @@ function getCoeff(coeff) {
     var powers = Object.keys(strVali(coeff));
     var max = Math.max.apply(null, powers);
     var result = [];
-    for(var i = max; i >= 0; i--)
+    for(var i = max; i >= 0; i--) {
         result.push(strVali(coeff)[i] || 0);
-    return result; }
+    }
+    return result;
+}
 
 function format(str) {
     str = ' ' + str;
@@ -31,10 +33,21 @@ function format(str) {
 
 function expBrackets(str) {
     var repeats = str.match(/\([^\(\)]+?\)\^\d+/g);
-    if ( repeats === null ) { return str; } else { var totalRepeat = '';
-    for ( var t = 0; t < repeats.length; t++ ) { var repeat = repeats[t].match(/\d+$/); for ( var u = 0; u < Number(repeat); u++ ) { totalRepeat += repeats[t].replace(/\^\d+$/,''); }
-        str = str.replace(/\([^\(\)]+?\)\^\d+/, totalRepeat); totalRepeat = ''; }
-    return str; }
+    if ( repeats === null ) {
+        return str;
+    }
+    else {
+        var totalRepeat = '';
+        for ( var t = 0; t < repeats.length; t++ ) { 
+            var repeat = repeats[t].match(/\d+$/); 
+            for ( var u = 0; u < Number(repeat); u++ ) { 
+                totalRepeat += repeats[t].replace(/\^\d+$/,'');
+            }
+            str = str.replace(/\([^\(\)]+?\)\^\d+/, totalRepeat); 
+            totalRepeat = ''; 
+        }
+    return str; 
+    }
 }
 
 function multiply(str) {
@@ -79,29 +92,35 @@ function evaluate(str) {
     var result = format(divide(format(multiply(expBrackets(format(str))))));
     var resultCollect = '';
 
-
     // replace(/\s+/g, "") means to remove all the spaces
     // replace(/[^\d]0x\^-?\d+/g,'') means to replace all the chartacters typed to ''
     // replace(/\+/g,' + ') means to trim a space before and after ' + '
     result = result.replace(/\s+/g, "").replace(/[^\d]0x\^-?\d+/g,'').replace(/\+/g,' + ');
 
-
     // when input is empty
-    if ( result === '') {
+    if (result === '') {
         // str + ' = 0 ' will be displayed on the document which the id's called 'result'
         document.getElementById('result').innerHTML = str + ' = 0 ';
+        // ?
         MathJax.Hub.Queue(["Typeset", MathJax.Hub, document.getElementById('result')]);
     }
 
+    // when input has no symbols
     else if ( result.match(/-?\d+x\^-\d+/g) === null && str.match(/\/(\(-?\d+x\^-?\d+.+?\))/g) === null) {
+        // dealing with coefficient
         for ( var i = 0; i < getCoeff(result).length; i++ ) {
         resultCollect += getCoeff(result)[i] + 'x^' + Number(getCoeff(result).length - 1 - i) + '+' ; }
-        if ( resultCollect !== '')
-        resultCollect = ' = ' + resultCollect.slice(0,-1).replace(/[^\d]0x\^-?\d+/g,'').replace(/\+/g,' + ').replace(/x\^0/g,'').replace(/x\^1(?!\d+)/g,'x').replace(/\^(-?\d+)/g,'\^\{$1\}').replace(/\+ -/g,' - ');
-        else
-        resultCollect = 'Error: Trying to divide by a polynomial ';
+        // when coefficient dealt well then getting 
+        if ( resultCollect !== '') {
+            resultCollect = ' = ' + resultCollect.slice(0,-1).replace(/[^\d]0x\^-?\d+/g,'').replace(/\+/g,' + ').replace(/x\^0/g,'').replace(/x\^1(?!\d+)/g,'x').replace(/\^(-?\d+)/g,'\^\{$1\}').replace(/\+ -/g,' - ');
+        }
+        // error when resultCollect is empty
+        else {
+            resultCollect = 'Error: Trying to divide by a polynomial ';
+        }
+        // display the output
         document.getElementById('result').innerHTML = str.replace(/\^(-?\d+)/g,'\^\{$1\}') + resultCollect;
-        MathJax.Hub.Queue(["Typeset", MathJax.Hub, document.getElementById('result')]);
+        // MathJax.Hub.Queue(["Typeset", MathJax.Hub, document.getElementById('result')]);
     }
 
     else {
