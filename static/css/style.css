@@ -1,7 +1,6 @@
 body {
   margin: 0;
 }
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -12,20 +11,21 @@ ul {
   height: 100%;
   overflow: auto;
 }
-
 li a {
   display: block;
   color: rgb(160, 160, 160);
   padding: 8px 16px;
   text-decoration: none;
 }
-
 li a.active {
   background-color: rgb(41, 41, 41);
   color: rgb(190, 190, 190);
 }
-
 li a:hover:not(.active) {
   background-color: rgb(41, 41, 41);
   color: white;
+}
+input {
+  height: 50px;
+  width: 500px;
 }
