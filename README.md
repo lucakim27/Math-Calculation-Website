@@ -5,13 +5,14 @@
 - To give users the easy calculation with maths equation.
 
 ## Features
-- Scientific calculator (Pending)
-- Great common divisor & Least common divisor calculator
+- Basic calculator (Pending)
+- Great common divisor & Least common multiple calculator
 - Graph calculator
 - Ordering calculator
 - Expanding calculator
+- Enquiry page
 
-## Features
+## Libraries
 - nerdamer.js
 - math.js
 - plotly.js
@@ -20,4 +21,4 @@
 - 11, Jan, 2021
 
 ## Link
-Click [here](https://lucakim27.github.io/Math-Calculation-Website/) to go to my calculator website.
+Click [here](https://lucakim27.github.io/Math-Calculation-Website/) to visit the website.

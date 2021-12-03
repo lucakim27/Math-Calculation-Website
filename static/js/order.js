@@ -22,5 +22,5 @@ function getOrdering() {
 
     array_for_numbers.sort(function(a, b){return a-b});
     // showing the output
-    document.getElementById("demo").innerHTML = array_for_numbers;
+    document.getElementById("orderParagraph").innerHTML = array_for_numbers;
 }
