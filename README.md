@@ -2,12 +2,12 @@
 - Math Calculation Website
 
 ## Objective
-- To give users the easy calculation with maths equation.
+- To give users an easy calculation with numbers and equations.
 
 ## Features
 - Basic calculator (Pending)
 - Great common divisor & Least common multiple calculator
-- Graph calculator
+- Graph calculator (Pending)
 - Ordering calculator
 - Expanding calculator
 - Enquiry page

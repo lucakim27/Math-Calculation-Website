@@ -132,7 +132,7 @@ function evaluate(str) {
 
 function caller() {
     // to get the input from document
-    var input = document.getElementById('input').value;
+    var input = document.getElementById('expandInput').value;
     // running the function evaluate for input
     evaluate(input);
 }

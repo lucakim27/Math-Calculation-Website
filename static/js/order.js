@@ -1,7 +1,7 @@
 function getOrdering() {
 
     // getting an input from user
-    var numbers = document.getElementById('idname').value;
+    var numbers = document.getElementById('orderInput').value;
     var numbers = numbers + ",";
 
     // putting the each number inputs into a list

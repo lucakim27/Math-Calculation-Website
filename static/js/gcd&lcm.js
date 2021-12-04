@@ -15,7 +15,7 @@ function getGCD() {
 
     var number = "";
     var numbers = [];
-    var str = document.getElementById('idname').value;
+    var str = document.getElementById('gcdLcmInput').value;
     str += ",";
     var n = str.length;
     
@@ -37,26 +37,26 @@ function getGCD() {
 
     if (numbers.length == 1) {
         if (numbers[0] == 0) {
-            document.getElementById("demo").innerHTML = "Value shouldn't be zero.";
+            document.getElementById("glParagraph").innerHTML = "Value shouldn't be zero.";
         }
         else {
-            document.getElementById("demo").innerHTML = numbers[0];
+            document.getElementById("glParagraph").innerHTML = numbers[0];
         }
     }
 
     else if (numbers.length == 2) {
         if (numbers[0] == 0 || numbers[1] == 0) {
-            document.getElementById("demo").innerHTML = "Value shouldn't be zero.";
+            document.getElementById("glParagraph").innerHTML = "Value shouldn't be zero.";
         }
         else {
             var a = gcd_two_numbers(numbers[0], numbers[1]);
-            document.getElementById("demo").innerHTML = a; 
+            document.getElementById("glParagraph").innerHTML = a; 
         }
     }
 
     else if (numbers.length > 2) {
         if (numbers[0] == 0 || numbers[1] == 0) {
-            document.getElementById("demo").innerHTML = "Value shouldn't be zero.";
+            document.getElementById("glParagraph").innerHTML = "Value shouldn't be zero.";
         }
         else {
             var a = gcd_two_numbers(numbers[0], numbers[1]);
@@ -64,7 +64,7 @@ function getGCD() {
 
         for (var index_of_numbers=2; index_of_numbers<numbers.length; index_of_numbers++) {
             if (numbers[index_of_numbers] == 0) {
-                document.getElementById("demo").innerHTML = "Value shouldn't be zero.";
+                document.getElementById("glParagraph").innerHTML = "Value shouldn't be zero.";
                 break
             }
             else {
@@ -73,7 +73,7 @@ function getGCD() {
             }
         }
 
-        document.getElementById("demo").innerHTML = cd;                    
+        document.getElementById("glParagraph").innerHTML = cd;                    
     }
 }
 
@@ -99,7 +99,7 @@ function getLCM() {
 
     var number = "";
     var numbers = [];
-    var str = document.getElementById('idname').value;
+    var str = document.getElementById('gcdLcmInput').value;
     str += ",";
     var n = str.length;
 
@@ -124,7 +124,7 @@ function getLCM() {
             document.getElementById("demo").innerHTML = "Value shouldn't be zero.";
         }
         else {
-            document.getElementById("demo").innerHTML = numbers[0];
+            document.getElementById("glParagraph").innerHTML = numbers[0];
         }
     }
 
@@ -134,13 +134,13 @@ function getLCM() {
         }
         else {
             var a = lcm_two_numbers(numbers[0], numbers[1]);
-            document.getElementById("demo").innerHTML = a; 
+            document.getElementById("glParagraph").innerHTML = a; 
         }
     }
 
     else if (numbers.length > 2) {
         if (numbers[0] == 0 || numbers[1] == 0) {
-            document.getElementById("demo").innerHTML = "Value shouldn't be zero.";
+            document.getElementById("glParagraph").innerHTML = "Value shouldn't be zero.";
         }
         else {
             var a = lcm_two_numbers(numbers[0], numbers[1]);
@@ -148,7 +148,7 @@ function getLCM() {
 
         for (var index_of_numbers=2; index_of_numbers<numbers.length; index_of_numbers++) {
             if (numbers[index_of_numbers] == 0) {
-                document.getElementById("demo").innerHTML = "Value shouldn't be zero.";
+                document.getElementById("glParagraph").innerHTML = "Value shouldn't be zero.";
                 break
             }
             else {
@@ -157,6 +157,6 @@ function getLCM() {
             }
         }
 
-        document.getElementById("demo").innerHTML = cd;                    
+        document.getElementById("glParagraph").innerHTML = cd;                    
     }
 }

@@ -8,13 +8,13 @@
     <body>
 
         <ul>
-            <li><a onclick="selection(this)">Home</a></li>
-            <li><a onclick="selection(this)">Basic Calculator</a></li>
-            <li><a onclick="selection(this)">GCD & LCM Calculator</a></li>
-            <li><a onclick="selection(this)">Graph Calculator</a></li>
-            <li><a onclick="selection(this)">Ordering Calculator</a></li>
-            <li><a onclick="selection(this)">Expand Calculator</a></li>
-            <li><a onclick="selection(this)">Enquiry</a></li>
+            <li id="homeLi" class="active"><a onclick="selection(this)">Home</a></li>
+            <li id="basicLi"><a onclick="selection(this)">Basic Calculator</a></li>
+            <li id="glLi"><a onclick="selection(this)">GCD & LCM Calculator</a></li>
+            <li id="graphLi"><a onclick="selection(this)">Graph Calculator</a></li>
+            <li id="orderLi"><a onclick="selection(this)">Ordering Calculator</a></li>
+            <li id="expandLi"><a onclick="selection(this)">Expand Calculator</a></li>
+            <li id="enquiryLi"><a onclick="selection(this)">Enquiry</a></li>
         </ul>
 
         <center>
@@ -86,11 +86,11 @@
             </div>
 
             <!-- GCD & LCM -->
-            <div id="gcd&lcmDiv">
+            <div id="gcdLcmDiv">
                 <h1>Greatest Common Divisor & Least Common Multiple</h1>
-                <p id="demo"></p>
+                <p id="glParagraph"></p>
                 <form id="form">
-                    <input type="type" id="idname" value="2, 4, 6">
+                    <input type="type" id="gcdLcmInput" value="2, 4, 6">
                 </form><br>
                 <button onclick="getGCD()">GCD</button>
                 <button onclick="getLCM()">LCM</button>
@@ -101,8 +101,8 @@
                 <h1>Graph Calculator</h1>
                 <form id="form">
                     <label for="eq" style="font-size: 45px;">f(x) = </label>
-                    <input type="text" id="eq" value="2x + 5" />
-                    <input type="submit" value="Draw" />
+                    <input type="text" id="eq" value="2x + 5"/>
+                    <input type="submit" value="Draw"/>
                 </form>
                 <p id="demo"></p>
                 <div id="plot"></div>
@@ -113,7 +113,7 @@
                 <h1>Expand Calculator</h1>
                 <div id="result"></div>
                 <div id="errors"></div><br>
-                <input id="input" type="text" value="(x+3)(x-3) + (x-4)^2">
+                <input id="expandInput" type="text" value="(x+3)(x-3) + (x-4)^2">
                 <br><br>
                 <button onclick="caller()">Expand</button>
             </div>
@@ -123,7 +123,7 @@
                 <h1>Ordering Calculator</h1>
                 <p id="orderParagraph"></p>
                 <form id="form">
-                    <input type="type" id="idname" value="12, 36, 54, 45">
+                    <input type="type" id="orderInput" value="12, 36, 54, 45">
                 </form><br>
                 <button onclick="getOrdering()">Order</button>
                 </form>
@@ -141,7 +141,6 @@
 
         </div>
         </center>
-
 
         <!-- INDEX JS -->
         <script type="text/javascript" src="static/js/index.js"></script>
